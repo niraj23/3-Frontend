@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 
-function ReviewCard({reviews, ratings}) {
+// function ReviewCard({review}) {
     
-    // const [reviewList, setReviewList] = useState([])
+//     const [reviewList, setReviewList] = useState([])
 
 
-    // function handleAddReview(newReview) {
-    //     setReviewList([...reviewList, newReview])
-    // }
+//     function handleAddReview(newReview) {
+//         setReviewList([...reviewList, newReview])
+//     }
 
-const displayReviews = reviews.map(review => <p>"{review.content}"</p>)
+//     return(
+//         <div className="review-card">
+//            <p>{review}</p>
+//         </div>
+//     )
+// }
 
-    return(
-        <div className="review-card">
-           {displayReviews}
-        </div>
-    )
-}
-
-export default ReviewCard;
+// export default ReviewCard;

@@ -12,10 +12,10 @@ function App() {
   const [songList, setSongList] = useState([])
 
   useEffect(() => {
-      fetch("http://localhost:6001/songs")
+      fetch(`http://localhost:6001/songs`)
       .then(res => res.json())
       .then(data => setSongList(data))
-      
+
       
   }, [])
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       {displaySongs}
-    <AddReview />
+    
     </div>
   );
 }

@@ -1,13 +1,18 @@
 import React from 'react'
 import ReviewCard from './ReviewCard'
 import Rating from './Rating'
+import { useState } from 'react'
+import Modal from './Modal'
 
-function SongCard({song: {title, artist, reviews, ratings}, songList}) {
+function SongCard({song: {title, artist, reviews, ratings}, songList, song}) {
 
-    //console.log(songList)
-    console.log(reviews)
-    const displayReviews = songList.map(song => (<ReviewCard key={song.id} reviews={song.reviews} ratings={song.ratings} />))
+    const [isShown, setIsShown] = useState(false)
+    
+  
+   const displayReviews = reviews.map(review => console.log(review))
+    
 
+    
     return(
         <>
         <div className="songCard">
@@ -17,8 +22,8 @@ function SongCard({song: {title, artist, reviews, ratings}, songList}) {
 
             <Rating />
 
-            <button id="review-button">Leave a Review</button>
-            
+            <button id="review-button" onClick={(e) => setIsShown(!isShown)} onclick={(e) => console.log(song.id)}>Leave a Review</button>
+            {isShown ? (<Modal />) : null}
             <p>See reviews</p>
             {displayReviews}
         </div>

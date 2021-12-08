@@ -9,13 +9,14 @@ const handleChange = (e) => {
 }
 
 const handleSubmit = (e) => {
+    console.log("chill out")
     e.preventDefault()
     console.log("Submit handled")
     const reviewData = {
         content: reviewContent,
 
     }
-    fetch("http://localhost:6001/review", {
+    fetch(`http://localhost:6001/songs`, {
         method: "POST",
         headers: {"Content-Type": "application/json",
     },

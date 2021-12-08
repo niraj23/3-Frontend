@@ -4,46 +4,30 @@
       "id": 0,
       "title": "Cheeseburger in Paradise",
       "artist": "Jimmy Buffet",
-      
       "reviews": [
-          {
-          "id": 0, 
-          "content": "This is my least favorite song of all time."
-          },
-          {
-          "id": 1,
-          "content": "This is my favorite song of all time."
-          }
-      
+        "This is my least favorite song of all time.",
+        "This is my favorite song of all time."
       ],
-      "ratings": [
-        {
-          "id": 0,
-          "value": ""
-        }   
-      ]
+      "ratings": []
     },
     {
       "id": 1,
       "title": "That Funny Feeling",
       "artist": "Phoebe Bridgers",
-      
       "reviews": [
-          {
-          "id": 0, 
-          "content": "Such emotional depth."
-          },
-          {
-          "id": 1,
-          "content": "Sad girl vibes 🤙💁"
-          }
-      
+        "Such emotional depth.",
+        "Sad girl vibes 🤙💁"
       ],
       "ratings": [
         {
           "id": 0,
           "value": ""
-        }   
-      ]}
+        }
+      ]
+    },
+    {
+      "content": "",
+      "id": 2
+    }
   ]
 }
