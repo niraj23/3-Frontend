@@ -3,6 +3,7 @@ import SongCard from './SongCard'
 import React, {useState, useEffect} from 'react'
 import AddReview from './AddReview'
 
+
 //move useState to app so that each Song can has it's own set of reviews and ratings
 //will need to reconfigure db.json so reviews and ratings are keys on each Song
 
@@ -20,7 +21,7 @@ function App() {
   }, [])
 
   
-  const displaySongs = songList.map(song => <SongCard key={song.id} songList={songList} song={song} />)
+  const displaySongs = songList.map(song => <SongCard key={song.id} songList={songList} song={song} reviews={song.reviews} /> )
 
 
   return (

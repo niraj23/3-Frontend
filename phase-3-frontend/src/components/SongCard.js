@@ -7,9 +7,9 @@ import Modal from './Modal'
 function SongCard({song: {title, artist, reviews, ratings}, songList, song}) {
 
     const [isShown, setIsShown] = useState(false)
-    
-  
-   const displayReviews = reviews.map(review => console.log(review))
+    const [reviewsAreShown, setReviewsAreShown] = useState(false)
+//   console.log(reviews)
+//    const displayReviews = reviews.map(review => <p>{review}</p>)
     
 
     
@@ -19,13 +19,15 @@ function SongCard({song: {title, artist, reviews, ratings}, songList, song}) {
             <p id="song-title">{title}</p>
             <p id="artist-name">{artist}</p>
             <p id="avg-rating">Average star rating: _/5 stars</p>
+    
 
             <Rating />
 
-            <button id="review-button" onClick={(e) => setIsShown(!isShown)} onclick={(e) => console.log(song.id)}>Leave a Review</button>
+            <button id="review-button" onClick={(e) => setIsShown(!isShown)} onClick={(e) => console.log(song.id)}>Leave a Review</button>
             {isShown ? (<Modal />) : null}
-            <p>See reviews</p>
-            {displayReviews}
+            <button id="show-reviews" onClick={(e) => setReviewsAreShown(!reviewsAreShown)}>See All Reviews</button>
+            {reviewsAreShown ? (<p className="reviews">{reviews}</p>) : null}
+            {/* {displayReviews} */}
         </div>
         </>
     )

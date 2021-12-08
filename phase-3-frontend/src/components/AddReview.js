@@ -4,39 +4,39 @@ function AddReview({handleAddReview}) {
 
 const [reviewContent, setReviewContent] = useState("")
 
-const handleChange = (e) => {
-    setReviewContent({reviewContent})
-}
+// const handleChange = (e) => {
+//     setReviewContent({reviewContent})
+// }
 
 const handleSubmit = (e) => {
-    console.log("chill out")
     e.preventDefault()
-    console.log("Submit handled")
-    const reviewData = {
-        content: reviewContent,
+//     console.log("Submit handled")
+//     // ???????
+    
+//     fetch(`http://localhost:6001/songs/${id}`, {
+//         method: "POST",
+//         headers: {"Content-Type": "application/json",
+//     },
+//         body: JSON.stringify(reviewData),
+//     })
+//     .then(res => res.json())
+//     .then(newReview => handleAddReview(newReview))
 
-    }
-    fetch(`http://localhost:6001/songs`, {
-        method: "POST",
-        headers: {"Content-Type": "application/json",
-    },
-        body: JSON.stringify(reviewData),
-    })
-    .then(res => res.json())
-    .then(newReview => handleAddReview(newReview))
-
-    setReviewContent("")
+//     setReviewContent("")
 }
 
-    return(
-        
-        <form id="review-form" onSubmit={(e) => handleSubmit(e)}>
-            <textarea id="reviewForm" type="text" onChange={(e) => setReviewContent(e.target.value)} minLength="10" maxLength="1000" placeholder="Write a review...">
-            </textarea>
-            <input type="submit"></input>
+    
 
-        </form>
-    )
+    return(
+        <div>
+            <form id="review-form" onSubmit={(e) => handleSubmit(e)}>
+                <textarea id="reviewForm" type="text" onChange={(e) => console.log(e.target.value)} minLength="10" maxLength="1000" placeholder="Write a review...">
+                </textarea>
+                <input type="submit"></input>
+
+            </form>
+        </div>
+           )
 }
 
 export default AddReview
