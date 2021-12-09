@@ -12,20 +12,16 @@ function handleAddReview(newReview) {
 const handleSubmit = (e) => {
     e.preventDefault()
     console.log("Submit handled")
-    // setReviewList([...reviewList, reviewContent])
-    // console.log(reviewList)
-    // console.log(reviewContent)
-    
-    // fetch(`http://localhost:6001/${song.id}`, {
-    //     method: "POST",
-    //     headers: {"Content-Type": "application/json",
-    // },
-    //     body: JSON.stringify(reviewContent),
-    // })
-    // .then(res => res.json())
-    // .then(newReview => handleAddReview(reviewContent))
-    console.log(reviewList)
-    console.log(reviewContent)
+
+    fetch(`http://localhost:6001/${song.id}`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json",
+    },
+        body: JSON.stringify(reviewContent),
+    })
+    .then(res => res.json())
+    .then(newReview => handleAddReview(reviewContent))
+
     handleAddReview(reviewContent)
     setReviewContent("")
 }
