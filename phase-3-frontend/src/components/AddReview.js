@@ -1,28 +1,33 @@
 import React, { useState } from 'react'
 
-function AddReview({handleAddReview}) {
+function AddReview({song: {id, reviews}, song, reviewList, setReviewList}) {
 
 const [reviewContent, setReviewContent] = useState("")
 
-// const handleChange = (e) => {
-//     setReviewContent({reviewContent})
-// }
+function handleAddReview(newReview) {
+       
+    setReviewList([...reviewList, newReview])
+}
 
 const handleSubmit = (e) => {
     e.preventDefault()
-//     console.log("Submit handled")
-//     // ???????
+    console.log("Submit handled")
+    // setReviewList([...reviewList, reviewContent])
+    // console.log(reviewList)
+    // console.log(reviewContent)
     
-//     fetch(`http://localhost:6001/songs/${id}`, {
-//         method: "POST",
-//         headers: {"Content-Type": "application/json",
-//     },
-//         body: JSON.stringify(reviewData),
-//     })
-//     .then(res => res.json())
-//     .then(newReview => handleAddReview(newReview))
-
-//     setReviewContent("")
+    // fetch(`http://localhost:6001/${song.id}`, {
+    //     method: "POST",
+    //     headers: {"Content-Type": "application/json",
+    // },
+    //     body: JSON.stringify(reviewContent),
+    // })
+    // .then(res => res.json())
+    // .then(newReview => handleAddReview(reviewContent))
+    console.log(reviewList)
+    console.log(reviewContent)
+    handleAddReview(reviewContent)
+    setReviewContent("")
 }
 
     
@@ -30,7 +35,7 @@ const handleSubmit = (e) => {
     return(
         <div>
             <form id="review-form" onSubmit={(e) => handleSubmit(e)}>
-                <textarea id="reviewForm" type="text" onChange={(e) => console.log(e.target.value)} minLength="10" maxLength="1000" placeholder="Write a review...">
+                <textarea id="reviewForm" type="text" onChange={(e) => setReviewContent(e.target.value)} minLength="10" maxLength="1000" placeholder="Write a review...">
                 </textarea>
                 <input type="submit"></input>
 

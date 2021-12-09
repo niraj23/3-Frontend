@@ -2,14 +2,8 @@ import React, { useState } from 'react'
 
 
 function ReviewCard({review}) {
-    
-    const [reviewList, setReviewList] = useState([])
-
-
-    function handleAddReview(newReview) {
-        setReviewList([...reviewList, newReview])
-    }
-
+    console.log('Hello')
+    console.log(review)
     return(
         <div className="review-card">
            <p>{review}</p>

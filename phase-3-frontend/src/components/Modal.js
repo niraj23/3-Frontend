@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import AddReview from './AddReview'
+// import React, { useState } from 'react';
+// import AddReview from './AddReview'
 
-function Modal() {
+// function Modal() {
 
-return (
-  <div id="modal">
-     <AddReview />
+// return (
+//   <div id="modal">
+//      <AddReview />
      
-  </div>
-)
-   }
+//   </div>
+// )
+//    }
 
-export default Modal;
+// export default Modal;
