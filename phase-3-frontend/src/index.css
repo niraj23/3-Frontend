@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,7 +28,7 @@ code {
   }
   
   #home-video {
-   height: 100vh;
+  height: 100vh;
     width: 100vw;
     object-fit: cover;
     position: fixed;
@@ -56,4 +59,25 @@ code {
     position: fixed;
   }
 
-  
+#home-title {
+  font-family: 'Lobster', cursive;
+  color: red;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 42px #0fa,
+    0 0 12px #0fa,
+    0 0 11px #0fa;
+}
+
+.rs-navbar-item {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+#devs {
+  font-family: 'Open Sans Condensed', sans-serif;
+}

@@ -10,7 +10,8 @@ const Home = () => {
                 <NavBar/>
             </div>
             <div id='title-container' style={{marginTop: '-10px'}}>
-                <h1 id='home-title' style={{paddingLeft: '137px', fontFamily: 'Trattatello, fantasy', color: 'red', fontSize: 'larger'}}>Christmas Spotify</h1>
+                
+                <h1 id='home-title' style={{paddingLeft: '137px'}}>Christmas Spotify</h1>
             </div>
         </div>
         </>

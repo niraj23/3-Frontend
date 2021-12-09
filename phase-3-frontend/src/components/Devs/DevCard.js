@@ -20,8 +20,8 @@ function DevCard({name, about, image, linkedIn, github}) {
                 <p>{about}</p>
             </section>
             <section className="contact">
-                <FontAwesomeIcon icon={faLinkedin} /><a target='_blank' rel="noopener noreferrer" href={linkedIn}>LinkedIn</a> <br></br>
-                <FontAwesomeIcon icon={faGithub} /><a target='_blank' rel="noopener noreferrer" href={github}>Github</a> <br></br>
+                <FontAwesomeIcon icon={faLinkedin} /><a className='linkedIn' target='_blank' rel="noopener noreferrer" href={linkedIn}>LinkedIn</a> <br></br>
+                <FontAwesomeIcon icon={faGithub} /><a className='github' target='_blank' rel="noopener noreferrer" href={github}>Github</a> <br></br>
             </section>
         </div>
         </header>
